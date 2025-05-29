@@ -19,7 +19,32 @@
 #define int8 int8_t
 #define int16 int16_t
 #define int32 int32_t
+#define uint32 uint32_t
 #define int64 int64_t
+#define uint64 int64_t
 #define uint64 uint64_t
 #define uint32 uint64_t
-int main(int,char**);
+int main(int,char **);
+
+
+typedef unsigned char IntId;
+typedef uint64 MacAdrress;
+typedef uint32 IpAdrress ;
+
+
+
+/*Interface e/0/1
+    MacAddress 48 bits
+    ip address 32
+
+
+
+
+*/
+
+struct InterFace{
+    IntId IntId:3;
+    MacAdrress Adress:48;
+    IpAdrress Ip;
+        
+};
